@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Model-Box</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button type="submit" class="submit" onclick="OpenPopUp()">Submit</button>
+
+        <div class="dialog" id="dialog">
+            <img src="img/tick.png" alt="tick-box"  >
+            <h3>Order Conformed</h3>
+            <p><b>Thank you for your order!</b></br>We will contact with you soon.</p>
+            <button type="button" id="conform" onclick="ClosePopUp()" >ok</button>
+        </div>
+
+    </div>
+
+<script>
+
+    alert("Please Click The Submit Button")
+    let popup = document.getElementById("dialog");
+
+    function OpenPopUp(){
+        popup.classList.add("open-popup");
+    }
+    function ClosePopUp(){
+        popup.classList.remove("open-popup");
+    }
+</script>
+</body>
+</html>
